@@ -9,5 +9,6 @@
         <TextBox HorizontalAlignment="Left" Margin="153,182,0,0" TextWrapping="Wrap" Text="{Binding Volume, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
         <Slider Minimum="0" Maximum="100" Value="{Binding Volume}" HorizontalAlignment="Left" Margin="326,182,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Content="x2" HorizontalAlignment="Left" Margin="170,241,0,0" VerticalAlignment="Top" Width="43"  Command="{Binding DoubleVolumeCommand }"/>
+        <Button Content="x3" HorizontalAlignment="Left" Margin="170,278,0,0" VerticalAlignment="Top" Width="43"  Command="{Binding TripleVolumeCommand}"/>
     </Grid>
 </Window>

@@ -27,6 +27,12 @@ namespace MvvmPractice
         // Rewrite DoubleVolume() using lambda expression
         // private void DoubleVolume() => Volume *= 2;
 
+        [RelayCommand]
+        private void TripleVolume()
+        {
+            Volume *= 3;
+        }
+
         public ViewModel()
         {
             _config = new ConfigModel();
