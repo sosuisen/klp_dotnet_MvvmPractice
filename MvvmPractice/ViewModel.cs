@@ -12,9 +12,18 @@ namespace MvvmPractice
         [ObservableProperty]
         private int _volume;
 
+        [ObservableProperty]
+        private int _brightness;
+
         // OnVolumeChanged() is called when Volume property is changed  
         partial void OnVolumeChanged(int value) {
             _config.Volume = value;
+            _config.SaveConfig();
+        }
+
+        partial void OnBrightnessChanged(int value)
+        {
+            _config.Brightness = value;
             _config.SaveConfig();
         }
 
@@ -37,6 +46,7 @@ namespace MvvmPractice
         {
             _config = new ConfigModel();
             _volume = _config.Volume;
+            _brightness = _config.Brightness;
         }
     }
 }
